@@ -1,5 +1,7 @@
 ---
+import Navigation from "../components/Navigation.astro";
 
+const pageTitle = "Mi primera pagina con Astro";
 ---
 
 <html lang="en">
@@ -8,9 +10,18 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{ pageTitle }</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navigation />
+		<h1>Mi primera pagina con Astro</h1>
 	</body>
 </html>
+
+<style>
+	h1{
+		color: red;
+		font-size: 2rem;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+</style>

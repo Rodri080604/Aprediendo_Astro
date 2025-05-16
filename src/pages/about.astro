@@ -1,0 +1,56 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Description from "../components/Description.astro";
+import Social from "../components/Social.astro";
+
+const skills = [
+	"HTML",
+	"CSS",
+	"JavaScript",
+	"Astro",
+	"Git",
+	"Figma",
+	"XAML",
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Sobre mu</title>
+	</head>
+	<body>
+		<Navigation />
+		<h1>Sobre mí</h1>
+        <Description />
+		<h2>Mis habilidades</h2>
+		<ul>
+			{skills.map(skill => (
+				<li>{skill}</li>
+			))}
+		</ul>
+
+		<h2>Redes sociales</h2>
+		<ul>
+			<li>
+				<Social platform="github" username="Rodri080604" />
+			</li>
+			<li>
+				<Social platform="twitter" username="JoseCarrilloDev" />
+			</li>
+			<li>
+				<Social platform="linkedin" username="josemariacarrillo" />
+			</li>
+			<li>
+				<Social platform="instagram" username="josemariacarrillo" />
+			</li>
+
+	</body>
+</html>
+
+<style>
+
+</style>
